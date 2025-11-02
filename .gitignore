@@ -1,0 +1,139 @@
+# .gitignore - Recipe App
+
+## IDE & Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+.env.local
+
+## Java/Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.classpath
+.project
+.settings/
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+*.class
+
+## Spring Boot
+HELP.md
+/target/
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+*.gradle
+/.gradle/
+
+## Database
+*.db
+*.sqlite
+*.sqlite3
+pgadmin4_settings_dir/
+
+## Node/Frontend
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.npm
+frontend/.eslintcache
+frontend/.env.local
+frontend/.env.*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+## OS
+.DS_Store
+Thumbs.db
+*.tmp
+
+## Environment
+.env
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+
+## Docker
+docker/postgres_data/
+docker/postgres_logs/
+
+## Logs
+logs/
+*.log
+npm-debug.log*
+
+## Testing
+coverage/
+.nyc_output/
+htmlcov/
+
+## Build & Distribution
+dist/
+build/
+/out/
+
+## Package
+*.tar.gz
+*.zip
+
+## Misc
+.DS_Store
+.AppleDouble
+.LSOverride
+*.bak
+*.swp
+*~
+.~
+
+## Backup
+backup/
+*.backup
+*.bak
+
+## Temporary
+temp/
+tmp/
+*.tmp
+
+## IDE local settings
+.idea/
+*.iml
+*.iws
+*.ipr
+
+## VS Code
+.vscode/extensions.json
+.vscode/launch.json
+.vscode/settings.json
+.vscode/tasks.json
+
+## Sass
+.sass-cache/
+
+## Next.js
+.next/
+out/
+
+## Nuxt.js
+.nuxt/
+
+## Production build directories
+/public/build/
+/dist/
