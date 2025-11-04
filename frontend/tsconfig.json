@@ -1,38 +1,49 @@
-{{
+{
+  {
+    "compilerOptions": {
+      "compilerOptions": {
+        "target": "ES2020",
+        "target": "es5",
+        "lib": [
+          "ES2020",
+          "DOM",
+          "DOM.Iterable"
+        ],
+        "lib": [
+          "dom",
+          "dom.iterable",
+          "esnext"
+        ],
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "declaration": true,
+        "skipLibCheck": true,
+        "declarationMap": true,
+        "strict": true,
+        "outDir": "./lib",
+        "forceConsistentCasingInFileNames": true,
+        "strict": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "module": "esnext",
+        "forceConsistentCasingInFileNames": true,
+        "moduleResolution": "node",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react-jsx""noImplicitAny": true,
+      },
+      "strictNullChecks": true,
+      "include": [
+        "src"
+      ]
 
-  "compilerOptions": {  "compilerOptions": {
-
-    "target": "ES2020",    "target": "es5",
-
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],    "lib": ["dom", "dom.iterable", "esnext"],
-
-    "jsx": "react-jsx",    "allowJs": true,
-
-    "declaration": true,    "skipLibCheck": true,
-
-    "declarationMap": true,    "strict": true,
-
-    "outDir": "./lib",    "forceConsistentCasingInFileNames": true,
-
-    "strict": true,    "noEmit": true,
-
-    "esModuleInterop": true,    "esModuleInterop": true,
-
-    "skipLibCheck": true,    "module": "esnext",
-
-    "forceConsistentCasingInFileNames": true,    "moduleResolution": "node",
-
-    "moduleResolution": "node",    "resolveJsonModule": true,
-
-    "resolveJsonModule": true,    "isolatedModules": true,
-
-    "allowSyntheticDefaultImports": true,    "jsx": "react-jsx"
-
-    "noImplicitAny": true,  },
-
-    "strictNullChecks": true,  "include": ["src"]
-
-    "strictFunctionTypes": true,}
+    "strictFunctionTypes": true,
+    }
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noUnusedLocals": true,
@@ -41,17 +52,41 @@
     "noFallthroughCasesInSwitch": true,
     "baseUrl": "src",
     "paths": {
-      "@/*": ["*"],
-      "@components/*": ["components/*"],
-      "@pages/*": ["pages/*"],
-      "@hooks/*": ["hooks/*"],
-      "@store/*": ["store/*"],
-      "@services/*": ["services/*"],
-      "@types/*": ["types/*"],
-      "@utils/*": ["utils/*"],
-      "@styles/*": ["styles/*"]
+      "@/*": [
+        "*"
+      ],
+      "@components/*": [
+        "components/*"
+      ],
+      "@pages/*": [
+        "pages/*"
+      ],
+      "@hooks/*": [
+        "hooks/*"
+      ],
+      "@store/*": [
+        "store/*"
+      ],
+      "@services/*": [
+        "services/*"
+      ],
+      "@types/*": [
+        "types/*"
+      ],
+      "@utils/*": [
+        "utils/*"
+      ],
+      "@styles/*": [
+        "styles/*"
+      ]
     }
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "build", "dist"]
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "dist"
+  ]
 }

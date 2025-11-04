@@ -30,7 +30,7 @@ const App: React.FC = () => {
             },
           }}
         />
-        
+
         <Routes>
           {/* Public Routes */}
           <Route path="/login" element={<LoginPage />} />

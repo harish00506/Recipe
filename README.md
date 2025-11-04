@@ -1,172 +1,240 @@
 # 🍳 Recipe App
 
-A modern, full-stack recipe management platform built with React, Spring Boot, and PostgreSQL. Enables users to store, search, and organize recipes while automatically generating shopping lists.
+A modern, full-stack recipe management application. Browse, search, create, and manage recipes. Automatically generate shopping lists from selected recipes.
 
-## 📖 Project Overview
+## 🎯 Quick Links
 
-**For detailed project requirements and specifications, see [PROJECT_STATEMENT.md](PROJECT_STATEMENT.md)**
+- **[Setup Guide](SETUP.md)** - Get started in 5 minutes
+- **[Project Details](PROJECT.md)** - Full project overview
+- **[API Documentation](API.md)** - REST API reference
+- **[Architecture](ARCHITECTURE.md)** - System design
+- **[Security](SECURITY.md)** - Security guidelines
+- **[Contributing](CONTRIBUTING.md)** - Development standards
 
-A digital platform enabling users to:
-- 📝 **Store recipes** with ingredients, instructions, and cuisines
-- 🔍 **Search and filter** recipes by ingredients and cuisine types
-- 🛒 **Generate shopping lists** from selected recipes
-- 📋 **Manage ingredients** with quantity consolidation
-- 💾 **Export and share** shopping lists
-
----
-
-## ✨ Key Features
-
-### Store Recipes
-- ✅ Add recipes with name, servings, and preparation time
-- ✅ Input multiple ingredients with quantities and units
-- ✅ Add step-by-step cooking instructions
-- ✅ Specify cuisine type for each recipe
-- ✅ Save recipes to personal collection
-- ✅ Edit existing recipes
-- ✅ Upload recipe images
-
-### Search & Filter
-- ✅ Search recipes by name or ingredients
-- ✅ Filter recipes by cuisine type
-- ✅ Search by single or multiple ingredients
-- ✅ Real-time search results
-- ✅ Sort by preparation time or name
-- ✅ Advanced filtering options
-
-### Shopping Lists
-- ✅ Select multiple recipes for shopping list
-- ✅ Automatically combine ingredients
-- ✅ Consolidate duplicate ingredients
-- ✅ Modify quantities in the list
-- ✅ Export to PDF or CSV
-- ✅ Share shopping lists via link
-- ✅ Checklist functionality
-
----
-
-## 🏗️ Technology Stack
-
-### **Backend**
-- **Framework:** Spring Boot 3.5.1
-- **Language:** Java 21
-- **Database:** PostgreSQL 15+
-- **ORM:** Hibernate/JPA
-- **ID Generation:** UUID (gen_random_uuid)
-- **Authentication:** JWT + Spring Security
-- **Mapping:** MapStruct
-- **Testing:** JUnit 5, Mockito
-
-### **Frontend**
-- **Framework:** React 18.x
-- **Language:** TypeScript
-- **State Management:** Context API or Redux
-- **HTTP Client:** Axios
-- **Styling:** Tailwind CSS
-- **UI Components:** Material-UI or NextUI
-- **Testing:** Jest, React Testing Library
-
-### **DevOps**
-- **Build Tool:** Maven
-- **Version Control:** Git
-- **CI/CD:** GitHub Actions
-- **Containerization:** Docker
-- **Package Manager:** npm
-
----
-
-## 📂 Project Structure
-
-```
-recipe-app/
-├── frontend/                                # React Frontend
-│   ├── src/
-│   │   ├── components/
-│   │   ├── pages/
-│   │   ├── services/
-│   │   ├── App.tsx
-│   │   └── main.tsx
-│   ├── package.json
-│   ├── vite.config.ts
-│   └── tsconfig.json
-│
-├── backend/                                 # Spring Boot Backend
-│   ├── src/main/java/com/recipeapp/
-│   │   ├── entity/
-│   │   ├── dto/
-│   │   ├── controller/
-│   │   ├── service/
-│   │   ├── repository/
-│   │   ├── security/
-│   │   ├── config/
-│   │   └── RecipeAppApplication.java
-│   ├── pom.xml
-│   └── application.properties
-│
-├── database/
-│   └── schema.sql
-│
-├── docs/
-│   ├── PROJECT_STATEMENT.md
-│   ├── DOCUMENTATION.md
-│   ├── API.md
-│   ├── CONTRIBUTING.md
-│   └── ARCHITECTURE.md
-│
-├── .github/
-│   ├── workflows/
-│   ├── ISSUE_TEMPLATE/
-│   └── PULL_REQUEST_TEMPLATE.md
-│
-├── README.md
-├── CHANGELOG.md
-├── LICENSE
-├── .gitignore
-├── .env.example
-├── docker-compose.yml
-└── setup.sh/setup.bat
-```
-
-## Getting Started
+## ⚡ Quick Start
 
 ### Prerequisites
-
-- Java 11 or higher
-- Node.js and npm
-- PostgreSQL
+- Node.js 16+
+- Java 17+
+- MySQL 8+
+- Docker (recommended)
 
 ### Installation
 
-1. Clone the repository:
-   ```
-   git clone <repository-url>
-   cd recipe-app
-   ```
+```bash
+# Clone repository
+git clone <repo-url>
+cd recipe-app
 
-2. Set up the backend:
-   - Navigate to the `backend` directory.
-   - Update the `application.properties` file with your PostgreSQL database credentials.
-   - Build and run the Spring Boot application:
-     ```
-     ./mvnw spring-boot:run
-     ```
+# Start database
+docker-compose up -d
 
-3. Set up the frontend:
-   - Navigate to the `frontend` directory.
-   - Install the dependencies:
-     ```
-     npm install
-     ```
-   - Start the React application:
-     ```
-     npm start
-     ```
+# Start backend (Terminal 1)
+cd backend
+mvn spring-boot:run
 
-### Usage
+# Start frontend (Terminal 2)
+cd frontend
+npm install
+npm start
+```
 
-- Access the application in your web browser at `http://localhost:3000`.
-- The main page will display a "Hello World" message.
+**Access**:
+- Frontend: http://localhost:3000
+- Backend: http://localhost:8080
 
-## Contributing
+See [SETUP.md](SETUP.md) for detailed setup instructions.
 
-Feel free to submit issues or pull requests for improvements or features.
+## ✨ Features
+
+### Recipe Management
+- Browse and search recipes
+- Create, edit, and delete recipes
+- Filter by cuisine
+- View recipe details (ingredients, instructions)
+- Responsive design (mobile & desktop)
+
+### Shopping Lists
+- Create shopping lists
+- Add recipes to lists
+- Manage items and quantities
+- Mark items as purchased
+
+### Authentication
+- User registration and login
+- Secure JWT authentication
+- Session management
+
+## 🏗️ Architecture
+
+```
+React Frontend (TypeScript + Tailwind)
+          ↕ (REST API + JWT)
+Spring Boot Backend (Java + JPA)
+          ↕ (JDBC)
+MySQL Database (8 entities)
+```
+
+**Components**:
+- **Backend**: 5 Controllers, 40+ Endpoints
+- **Frontend**: 10+ Components, 3 Zustand Stores
+- **Database**: 8 JPA Entity Models
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for detailed architecture.
+
+## � Project Structure
+
+```
+recipe-app/
+├── backend/                 Spring Boot API
+├── frontend/                React Application
+├── database/                Database Schema
+├── docker-compose.yml       Docker Configuration
+├── README.md                This file
+├── SETUP.md                 Setup Instructions
+├── PROJECT.md               Project Details
+├── API.md                   API Documentation
+├── ARCHITECTURE.md          System Design
+├── SECURITY.md              Security Guidelines
+├── CONTRIBUTING.md          Development Standards
+└── CHANGELOG.md             Version History
+```
+
+## 🔌 API Overview
+
+### Authentication
+```
+POST   /auth/register      Register new user
+POST   /auth/login         User login
+```
+
+### Recipes
+```
+GET    /recipes            List recipes
+GET    /recipes/:id        Get recipe details
+POST   /recipes            Create recipe
+PUT    /recipes/:id        Update recipe
+DELETE /recipes/:id        Delete recipe
+GET    /recipes/search     Search recipes
+```
+
+### Shopping Lists
+```
+GET    /shopping-lists              List lists
+POST   /shopping-lists              Create list
+PUT    /shopping-lists/:id/items    Manage items
+DELETE /shopping-lists/:id          Delete list
+```
+
+See [API.md](API.md) for complete API documentation.
+
+## 🗄️ Database
+
+8 Entity Models:
+- User, Cuisine, Ingredient, Unit
+- Recipe, RecipeIngredient
+- ShoppingList, ShoppingListItem
+
+See [ARCHITECTURE.md](ARCHITECTURE.md) for ER diagram.
+
+## 🔐 Security
+
+- JWT token authentication
+- Password hashing (BCrypt)
+- CORS configuration
+- Input validation
+- Error handling
+
+See [SECURITY.md](SECURITY.md) for security guidelines.
+
+## 🚀 Development
+
+### Running Development Server
+
+```bash
+# Backend
+cd backend && mvn spring-boot:run
+
+# Frontend
+cd frontend && npm start
+```
+
+### Building for Production
+
+```bash
+# Backend
+cd backend && mvn clean package
+
+# Frontend
+cd frontend && npm run build
+```
+
+### Docker Deployment
+
+```bash
+docker-compose up --build -d
+```
+
+See [SETUP.md](SETUP.md) for detailed instructions.
+
+## 📚 Documentation
+
+| Document | Purpose |
+|----------|---------|
+| [SETUP.md](SETUP.md) | Installation & configuration |
+| [PROJECT.md](PROJECT.md) | Project overview & features |
+| [API.md](API.md) | REST API reference |
+| [ARCHITECTURE.md](ARCHITECTURE.md) | System design |
+| [SECURITY.md](SECURITY.md) | Security best practices |
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Development guidelines |
+| [CHANGELOG.md](CHANGELOG.md) | Version history |
+
+## 🛠️ Tech Stack
+
+### Backend
+- Spring Boot 3.x
+- Java 17+
+- MySQL 8.x
+- JPA/Hibernate
+- JWT Authentication
+
+### Frontend
+- React 18.2+
+- TypeScript 4.9+
+- Tailwind CSS 3.3+
+- Zustand (state management)
+- Axios (HTTP client)
+
+### Infrastructure
+- Docker & Docker Compose
+- Git Version Control
+
+## 📊 Status
+
+| Phase | Status | Details |
+|-------|--------|---------|
+| Backend | ✅ Complete | 40+ REST endpoints |
+| Frontend | ✅ Complete | Modern React setup |
+| Components | 🔄 In Progress | Building UI components |
+| Testing | ⏳ Pending | Unit & integration tests |
+| Deployment | ⏳ Pending | Cloud deployment |
+
+## 📝 License
+
+See [LICENSE](LICENSE) for licensing information.
+
+## 👥 Contributing
+
+Contributions welcome! See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
+
+## 📞 Support
+
+- Check [SETUP.md](SETUP.md) for common issues
+- Review [API.md](API.md) for API questions
+- See [ARCHITECTURE.md](ARCHITECTURE.md) for design questions
+
+## 🔄 Version
+
+**1.0.0** - Initial Release
+
+See [CHANGELOG.md](CHANGELOG.md) for version history.
