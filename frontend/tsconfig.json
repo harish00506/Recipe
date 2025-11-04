@@ -1,49 +1,28 @@
 {
-  {
-    "compilerOptions": {
-      "compilerOptions": {
-        "target": "ES2020",
-        "target": "es5",
-        "lib": [
-          "ES2020",
-          "DOM",
-          "DOM.Iterable"
-        ],
-        "lib": [
-          "dom",
-          "dom.iterable",
-          "esnext"
-        ],
-        "jsx": "react-jsx",
-        "allowJs": true,
-        "declaration": true,
-        "skipLibCheck": true,
-        "declarationMap": true,
-        "strict": true,
-        "outDir": "./lib",
-        "forceConsistentCasingInFileNames": true,
-        "strict": true,
-        "noEmit": true,
-        "esModuleInterop": true,
-        "esModuleInterop": true,
-        "skipLibCheck": true,
-        "module": "esnext",
-        "forceConsistentCasingInFileNames": true,
-        "moduleResolution": "node",
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "allowSyntheticDefaultImports": true,
-        "jsx": "react-jsx""noImplicitAny": true,
-      },
-      "strictNullChecks": true,
-      "include": [
-        "src"
-      ]
-
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "jsx": "react-jsx",
+    "allowJs": true,
+    "declaration": true,
+    "skipLibCheck": true,
+    "declarationMap": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "ESNext",
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
     "strictFunctionTypes": true,
-    }
     "noImplicitThis": true,
     "alwaysStrict": true,
     "noUnusedLocals": true,
@@ -55,26 +34,50 @@
       "@/*": [
         "*"
       ],
+      "@components": [
+        "components"
+      ],
       "@components/*": [
         "components/*"
+      ],
+      "@pages": [
+        "pages"
       ],
       "@pages/*": [
         "pages/*"
       ],
+      "@hooks": [
+        "hooks"
+      ],
       "@hooks/*": [
         "hooks/*"
+      ],
+      "@store": [
+        "store"
       ],
       "@store/*": [
         "store/*"
       ],
+      "@services": [
+        "services"
+      ],
       "@services/*": [
         "services/*"
+      ],
+      "@types": [
+        "types"
       ],
       "@types/*": [
         "types/*"
       ],
+      "@utils": [
+        "utils"
+      ],
       "@utils/*": [
         "utils/*"
+      ],
+      "@styles": [
+        "styles"
       ],
       "@styles/*": [
         "styles/*"

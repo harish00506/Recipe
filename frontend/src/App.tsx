@@ -1,16 +1,16 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'react-hot-toast';
-import { useAuthStore } from '@store';
-import Layout from '@components/Layout';
-import PrivateRoute from '@components/PrivateRoute';
-import LoginPage from '@pages/LoginPage';
-import RegisterPage from '@pages/RegisterPage';
-import HomePage from '@pages/HomePage';
-import RecipesPage from '@pages/RecipesPage';
-import RecipeDetailPage from '@pages/RecipeDetailPage';
-import ShoppingListPage from '@pages/ShoppingListPage';
-import '@styles/globals.css';
+import { useAuthStore } from './store';
+import Layout from './components/Layout';
+import PrivateRoute from './components/PrivateRoute';
+import LoginPage from './pages/LoginPage';
+import RegisterPage from './pages/RegisterPage';
+import HomePage from './pages/HomePage';
+import RecipesPage from './pages/RecipesPage';
+import RecipeDetailPage from './pages/RecipeDetailPage';
+import ShoppingListPage from './pages/ShoppingListPage';
+import './styles/globals.css';
 
 const App: React.FC = () => {
   const isAuthenticated = useAuthStore((state) => state.isAuthenticated);

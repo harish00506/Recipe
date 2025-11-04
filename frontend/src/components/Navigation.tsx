@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAuthStore } from '@store';
+import { useAuthStore } from '../store';
 import toast from 'react-hot-toast';
 
 interface NavigationProps {

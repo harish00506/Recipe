@@ -1,6 +1,6 @@
 import React from 'react';
 import { Navigate } from 'react-router-dom';
-import { useAuthStore } from '@store';
+import { useAuthStore } from '../store';
 
 interface PrivateRouteProps {
     component: React.ComponentType<any>;
